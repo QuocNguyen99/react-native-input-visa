@@ -17,6 +17,8 @@ yarn add react-native-input-visa
 ## Usage
 
 ```javascript
+const [value, setValue] = useState({});
+
 <InputVisa
         styleContainerInput={styles.inputContainer}
         styleContainer={styles.container}
@@ -41,7 +43,15 @@ yarn add react-native-input-visa
 ```
 
 ## Note
-If you want style border, you need to set borderWidth:0 first
+-Value return :
+        {
+        0:"",
+        1:"",
+        2:"",
+        3:"",
+        }
+ (key is index input)
+-If you want style border, you need to set borderWidth:0 first
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
