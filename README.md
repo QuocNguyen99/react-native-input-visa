@@ -4,8 +4,6 @@ React-native-input-visa make visa entry easier
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
 ```bash
 npm i react-native-input-visa
 ```
@@ -43,7 +41,7 @@ const [value, setValue] = useState({});
 ```
 
 ## Note
--Value return :
+Value return :
         {
         0:"",
         1:"",
@@ -51,7 +49,8 @@ const [value, setValue] = useState({});
         3:"",
         }
  (key is index input)
--If you want style border, you need to set borderWidth:0 first
+ 
+If you want style border, you need to set borderWidth:0 first
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
