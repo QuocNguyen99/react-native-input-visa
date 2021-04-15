@@ -7,17 +7,11 @@ React-native-input-visa make visa entry easier
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 ```bash
-  inputContainer: {
-    borderBottomColor:'gray',
-    borderWidth:0,
-    borderBottomWidth:2
-  },
-  textInput:{
-    color:'white'
-  },
-  container:{
-    marginHorizontal:10,
-  }
+npm i react-native-input-visa
+```
+or
+```bash
+yarn add react-native-input-visa
 ```
 
 ## Usage
