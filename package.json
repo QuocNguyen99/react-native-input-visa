@@ -1,17 +1,19 @@
 {
-  "name": "input-visa",
+  "name": "react-native-input-visa",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "input",
-    "visa",
-    "react-native",
-    "react-component"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuocNguyen99/input-visa.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuocNguyen99/input-visa/issues"
+  },
+  "homepage": "https://github.com/QuocNguyen99/input-visa#readme"
 }

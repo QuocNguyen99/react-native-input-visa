@@ -3,9 +3,10 @@ import {SafeAreaView, StyleSheet} from 'react-native';
 import AppTextInput from './AppTextInput';
 export default function InputVisa({
   value,
-  getValue,
-  styleContainer,
+  onChangeText,
+  styleContainerInput,
   styleTextInput,
+  styleContainer,
 }) {
   const array = Array(4).fill(0);
   const [listRef, setListRef] = useState([]);
@@ -20,16 +21,14 @@ export default function InputVisa({
   }, []);
 
   const focusPrevious = (key, index) => {
-    console.log('INDEX', index);
     if (key === 'Backspace' && value[index].length == 0 && index !== 0) {
-      getValue({
+      onChangeText({
         ...value,
         [index - 1]: value[index - 1].slice(0, value[index - 1].length - 1),
       });
       return listRef[index - 1].current.focus();
     }
-
-    getValue({
+    onChangeText({
       ...value,
       [index]: value[index].slice(0, value[index].length - 1),
     });
@@ -39,20 +38,13 @@ export default function InputVisa({
     if (text?.length == 4 && index < 3) {
       listRef[index + 1].current.focus();
       if (value[index + 1]?.length == 4 && index + 1 < 3) {
-        console.log('XYZ');
         focusNext(value[index + 1], index + 1);
       }
     }
-    getValue({...value, [index]: text});
+    onChangeText({...value, [index]: text});
   };
   return (
-    <SafeAreaView
-      style={{
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        marginHorizontal: 20,
-      }}>
+    <SafeAreaView style={[styles.container, styleContainer]}>
       {array.map((e, index) => (
         <AppTextInput
           value={value[index]}
@@ -63,11 +55,17 @@ export default function InputVisa({
           onChangeText={text => focusNext(text, index)}
           widthLimitNumber={'23%'}
           styleTextInput={styleTextInput}
-          styleContainer={styleContainer}
+          styleContainerInput={styleContainerInput}
         />
       ))}
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
+});
