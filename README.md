@@ -33,7 +33,7 @@ const [value, setValue] = useState({});
     borderBottomWidth:2
   },
   textInput:{
-    color:'white'
+    color:'black'
   },
   container:{
     marginHorizontal:10,
